@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namste React</title>    
+</head>
+<body>
+
+    
+    <div id="root"> 
+        
+    </div>
+    
+
+    
+  
+    <!--  inject React via CDN  -->
+
+    <!-- order of below file matter -->
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+     <script 
+         crossorigin 
+         src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
+
+    <script>
+        const heading = React.createElement(
+            "h1" ,
+            {id: 'heading',xyz: 'abc'} ,
+            "Hello World From React!" 
+        );
+        
+        //console.log(heading); //returns Object
+        const root =  ReactDOM.createRoot(document.getElementById("root"));
+        
+        // root.render's job is take object and put it up and convert object in h1 tag and put in dom
+        //root.render replace the content inside root div
+        root.render(heading);
+    </script>
+
+</body>
+</html>
