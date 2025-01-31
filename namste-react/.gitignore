@@ -1,0 +1,3 @@
+//files that we donot want to push in  git 
+
+/node_modules
